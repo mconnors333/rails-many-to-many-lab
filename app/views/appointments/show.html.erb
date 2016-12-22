@@ -1,0 +1,7 @@
+<h3><%=link_to "Home", doctors_path %> |
+<%= link_to "Back", appointments_path%></h3>
+
+<div>
+  <%="#{@appointment.time} #{@patient.name} for #{@doctor.name} " %>
+
+</div>

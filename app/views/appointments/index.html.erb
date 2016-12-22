@@ -1,0 +1,14 @@
+<%= link_to "Home", doctors_path %>
+<h2>Appointments <a href="/appointments/new">(+)</a></h2>
+
+
+<ul>
+
+  <% @appointments.each do |appointment| %>
+    <li>
+      <a href="/appointments/<%= appointment.id %>">
+        <%= appointment.time %>
+      </a>
+    </li>
+  <% end %>
+</ul>
