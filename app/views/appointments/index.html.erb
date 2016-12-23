@@ -5,9 +5,13 @@
 <ul>
 
   <% @appointments.each do |appointment| %>
+  <% doctor_name = Doctor.find(appointment.doctor_id) %>
+  <% patient_name = Patient.find(appointment.patient_id) %>
+  <% doctor_name = doctor_name.name %>
+  <% patient_name = patient_name.name %>
     <li>
       <a href="/appointments/<%= appointment.id %>">
-        <%= appointment.time %>
+        <%= "#{appointment.time} #{patient_name} for Dr. #{doctor_name}"  %>
       </a>
     </li>
   <% end %>

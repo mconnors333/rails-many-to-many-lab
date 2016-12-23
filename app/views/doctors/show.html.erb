@@ -4,7 +4,7 @@
 
 <h2> Specialty: <%= @doctor.specialty %> </h2>
 <%= link_to "Schedule #{@doctor.name}", new_appointment_path  %><br>
-<%= link_to "View Appoinments", appointments_path  %><br>
+<%= link_to "View Appointments", appointments_path  %><br>
 <%= link_to "Edit #{@doctor.name}", edit_doctor_path(@doctor)  %><br>
 <%= link_to "Fire #{@doctor.name}", doctor_path(@doctor),
   method: :delete, data: {confirm: "Give unemployment?"}  %>
